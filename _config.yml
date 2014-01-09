@@ -1,0 +1,20 @@
+markdown: rdiscount
+permalink: /:title
+title: list.her.sh
+url: http://list.her.sh
+pygments: true
+
+exclude: [vendor, gems, Gemfile, Gemfile.lock, readme.md, publish.sh]
+
+parent:
+  name: her.sh
+  url: http://her.sh
+
+feedurl: http://list.her.sh/atom.xml
+sourceurl: https://github.com/jhersh/list.her.sh
+
+author:
+  name: Jonathan Hersh
+  email: jon@her.sh
+  twitter: https://twitter.com/jhersh
+  adn: https://alpha.app.net/jhersh

@@ -1,0 +1,20 @@
+<hr />
+
+<p>Comment to <a href="{{ site.author.twitter }}">@jhersh on twitter</a>.</p>
+
+<p>    
+	{% assign hasPrevious = page.previous.url != null %}
+    {% assign hasNext = page.next.url != null %}
+    
+    {% if hasPrevious %}
+        &larr; Previously: <a class="page-link" href="{{ page.previous.url }}" title="{{ page.previous.title }}">{{ page.previous.title }}</a>
+    {% endif %}
+    
+    {% if hasPrevious and hasNext %}
+    |
+    {% endif %}
+    
+    {% if hasNext %}        
+        Next: <a class="page-link" href="{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }}</a> &rarr;
+    {% endif %}    
+</p>

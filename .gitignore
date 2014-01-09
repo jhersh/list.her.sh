@@ -1,0 +1,6 @@
+_drafts/
+.DS_Store
+*.swp
+
+# generated site
+_site/
