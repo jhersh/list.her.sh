@@ -2,7 +2,7 @@ markdown: rdiscount
 permalink: /:title
 title: list.her.sh
 url: http://list.her.sh
-pygments: true
+highlighter: pygments
 
 exclude: [vendor, gems, Gemfile, Gemfile.lock, readme.md, publish.sh]
 

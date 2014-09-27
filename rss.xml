@@ -1,5 +1,5 @@
 ---
-layout: nil
+
 ---
 
 {% include feed.xml %}
