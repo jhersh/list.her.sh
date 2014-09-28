@@ -3,7 +3,7 @@
 SITE="s3://list.her.sh/"
 
 bundle exec jekyll build --config _config.yml
-bundle exec htmlproof ./_site --verbose
+bundle exec htmlproof --verbose --favicon ./_site
 
 find _site/ -iname '*.html' -exec gzip -n --best {} +
 find _site/ -iname '*.xml' -exec gzip -n --best {} +
