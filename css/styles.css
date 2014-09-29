@@ -82,7 +82,7 @@ acronym {
 }
 code,
 pre {
-	font-family: "Courier New", Courier, monospace;
+	font-family: Menlo, Consolas, Monaco, "Lucida Console", Courier, monospace;
 }
 #header {
 	background: #0a0a0a;
