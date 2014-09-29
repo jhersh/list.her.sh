@@ -18,3 +18,5 @@ author:
   email: jon@her.sh
   twitter: https://twitter.com/jhersh
   adn: https://alpha.app.net/jhersh
+
+excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed
