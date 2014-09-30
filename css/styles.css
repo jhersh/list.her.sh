@@ -84,6 +84,15 @@ code,
 pre {
 	font-family: Menlo, Consolas, Monaco, "Lucida Console", Courier, monospace;
 }
+
+p code {
+	background-color: #DDD;
+	border-radius: 5px;
+	padding-left: 3px;
+	padding-right: 3px;
+	color: #111;
+}
+
 #header {
 	background: #0a0a0a;
 	border-bottom: 1px solid #242424;
