@@ -64,9 +64,12 @@ body {
 	background: #1b1b1b;
 	color: #ddd;
 	font: 100% Verdana, Arial, Helvetica, Tahoma, sans-serif;
+	-webkit-font-smoothing: subpixel-antialiased; 
+	vertical-align: baseline;
 }
 a {
 	color: #6dcff6;
+	font-weight: bolder;
 }
 
 #content {
