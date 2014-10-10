@@ -5,9 +5,9 @@ summary: Preprocessor macros for a 64-bit world.
 tags: ios
 ---
 
-Apple's A7 chip famously moved to a 64-bit architecture and ushered in an era of access to more memory* and a `CGFloat` type previously aliased to `float` newly redefined as `double`. Wait, what?
+Apple's A7 chip famously moved to a 64-bit architecture. This ushered in an era of access to more memory* and a `CGFloat` type previously aliased to `float` newly redefined as `double`. Wait, what?
 
-If you're writing an iOS app that targets multiple architectures, you'll want to use the proper `CGFloat` type for the device's architecture. You'll also want to use the correct `float` or `double` versions of math functions like `floor` (double) or `floorf` (float).
+If you're writing an iOS app that targets multiple architectures, you'll want to use the proper `CGFloat` type for the current device's architecture. You'll also want to use the correct `float` or `double` versions of math functions like `floor` (double) or `floorf` (float).
 
 Thanks to some preprocessor magic and the `CGFLOAT_IS_DOUBLE` define, we can construct an include file that does all the heavy lifting for us. Behold, `SPLFloat.h`:
 
