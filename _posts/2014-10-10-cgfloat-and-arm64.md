@@ -11,6 +11,8 @@ If you're writing an iOS app that targets multiple architectures, you'll want to
 
 Thanks to some preprocessor magic and the `CGFLOAT_IS_DOUBLE` define, we can construct an include file that does all the heavy lifting for us. Behold, `SPLFloat.h`:
 
+*Update:* One alternative to the below is [`tgmath.h`](http://pubs.opengroup.org/onlinepubs/009695399/basedefs/tgmath.h.html), with the caveat that it must be included before `math.h`. That can be challenging if you're using CocoaPods.
+
 {% highlight objc %}
 
 // SPLFloat.h

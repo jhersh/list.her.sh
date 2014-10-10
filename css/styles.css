@@ -96,6 +96,10 @@ p code {
 	color: #111;
 }
 
+p a code {
+	color: #015BA7;
+}
+
 #header {
 	background: #0a0a0a;
 	border-bottom: 1px solid #242424;
