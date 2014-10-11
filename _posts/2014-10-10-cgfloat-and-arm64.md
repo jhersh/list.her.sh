@@ -14,7 +14,6 @@ Thanks to some preprocessor magic and the `CGFLOAT_IS_DOUBLE` define, we can con
 **Update:** One alternative to the below is [`tgmath.h`](http://pubs.opengroup.org/onlinepubs/009695399/basedefs/tgmath.h.html), though it must be included before `math.h`. That can be challenging if you're using CocoaPods.
 
 {% highlight objc %}
-
 // SPLFloat.h
 
 @import Foundation;
@@ -67,5 +66,5 @@ CG_INLINE CGFLOAT_TYPE SPLFloat_pow(CGFLOAT_TYPE cgfloat,
 #endif
 }
 {% endhighlight %}
-
+<br/>
 \* My kingdom for an iPhone with more than 1GB RAM.
