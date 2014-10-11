@@ -9,7 +9,7 @@ Apple's A7 chip famously moved to a 64-bit architecture. This ushered in an era 
 
 If you're writing an iOS app that targets multiple architectures, you'll want to use the proper `CGFloat` type for the current device's architecture. You'll also want to use the correct `float` or `double` versions of math functions like `floor` (double) or `floorf` (float).
 
-Thanks to some preprocessor magic and the `CGFLOAT_IS_DOUBLE` define, we can construct some functions that call the correct function and return a number of the correct type for the current architecture. Behold, `SPLFloat.h`!
+Thanks to some preprocessor magic and the `CGFLOAT_IS_DOUBLE` define, we can construct some helpers that call the correct math function and return a number of the correct type for the current architecture. Behold, `SPLFloat.h`!
 
 **Update:** One alternative to the below is [`tgmath.h`](http://pubs.opengroup.org/onlinepubs/009695399/basedefs/tgmath.h.html), though it must be included before `math.h`. That can be challenging if you're using CocoaPods.
 
