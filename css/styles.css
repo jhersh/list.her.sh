@@ -65,6 +65,7 @@ body {
 	color: #ccc;
 	font: 115% 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 	vertical-align: baseline;
+	-webkit-font-smoothing: antialiased;
 }
 a {
 	color: #6dcff6;
