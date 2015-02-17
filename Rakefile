@@ -1,3 +1,7 @@
+task :setup do
+	sh "bundle check --path=vendor/bundle || bundle install --jobs=4 --retry=2 --path=vendor/bundle"
+end
+
 task :serve do
 	sh "bundle exec jekyll serve --watch --config _config.yml"
 end
@@ -8,7 +12,7 @@ task :publish do
 		SITE="s3://list.her.sh/"
 		
 		bundle exec jekyll build --config _config.yml
-		bundle exec htmlproof --verbose --favicon ./_site
+		bundle exec htmlproof --check-favicon --check-html --verbose _site
 		
 		find _site/ -iname '*.html' -exec gzip -n --best {} +
 		find _site/ -iname '*.xml' -exec gzip -n --best {} +

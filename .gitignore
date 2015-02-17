@@ -4,3 +4,6 @@ _drafts/
 
 # generated site
 _site/
+
+.bundle
+vendor/bundle
