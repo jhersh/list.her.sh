@@ -15,8 +15,6 @@ div,
 dl,
 dt,
 dd,
-ul,
-ol,
 li,
 h1,
 h2,
@@ -89,7 +87,8 @@ pre {
 	font-family: Menlo, Consolas, Monaco, "Lucida Console", Courier, monospace;
 }
 
-p code {
+p code,
+li code {
 	background-color: #DDD;
 	border-radius: 5px;
 	padding-left: 3px;
@@ -145,6 +144,10 @@ h2.page-title {
 /* =Post content
 -------------------------------------------------------------- */
 
+div.highlight {
+	margin-bottom: 20px;
+}
+
 ul.posts {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -167,7 +170,7 @@ p.summary {
 }
 
 .post a:visited {
-    color: #999;
+    color: #FFF;
 }
 
 #content a:hover,
