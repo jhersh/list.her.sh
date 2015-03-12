@@ -5,7 +5,7 @@ summary: Measuring code coverage in your iOS app or library for fun and profit!
 tags: ios
 ---
 
-Code coverage measures how much of your app or library is executed by at least one of your tests. This manifests as a percentage from 0-100% (higher is better!) that can be a good high-level indicator of the quality — or at least the breadth — of your tests. 
+Code coverage measures how much of your app or library is executed by at least one of your tests. This manifests as a percentage from 0-100% that can be a good high-level indicator of the quality — or at least the breadth — of your tests. 
 
 Today we'll see how easy it is to automatically measure, report, and visualize code coverage in your iOS app or library. You'll end up with a report [like this one](https://coveralls.io/builds/1975865) for each file in your project and a great visual representation showing line-by-line where your coverage is strong, where you can improve, and how your coverage trends up (or down!) over time. 
 
@@ -21,9 +21,9 @@ You will need:
 
 First, you'll need to get CI to run your project's tests each time you push a commit. See the [Travis CI iOS docs](http://docs.travis-ci.com/user/languages/objective-c/) and [CircleCI iOS docs](https://circleci.com/docs/ios), or perhaps you'll be inspired by these [`.travis.yml`](https://github.com/IFTTT/JazzHands/blob/master/.travis.yml) and [`circle.yml`](https://github.com/splinesoft/SPLUserActivity/blob/master/circle.yml) files from the above projects. 
 
-Now you'll need to add the [slather](https://github.com/venmo/slather) rubygem to your project. You don't necessarily need slather installed locally on your development machine; rather, you could include it in your project's `Gemfile` or as a dependency command [like this](https://github.com/IFTTT/JazzHands/blob/master/.travis.yml#L3) in your `.travis.yml`. You'll also need to instruct your CI service to execute slather after a successful build; for Travis CI, you might add to your `.travis.yml` a line like `after_success: slather`.
+Now you'll need to add the [slather](https://github.com/venmo/slather) rubygem to your project. You don't necessarily need slather installed locally on your development machine; rather, you could include it in your project's `Gemfile` or as a [dependency command](https://github.com/IFTTT/JazzHands/blob/master/.travis.yml#L3) in your `.travis.yml`. You'll also need to instruct your CI service to execute slather after a successful build: for Travis CI, you might add to your `.travis.yml` a line like `after_success: slather`.
 
-Next you'll need to update some build settings in your project so that when your project's tests are run, `xcodebuild` will measure the code paths that are executed by your tests and generate a file that code coverage utilities can parse for coverage results.
+You'll need to update some build settings in your project so that when your project's tests are run, `xcodebuild` will measure the code paths that are executed by your tests and generate a file that code coverage utilities can parse for coverage results.
 
 There are three ways to set this up. Pick your favorite:
 
@@ -49,6 +49,6 @@ xcodeproj: Example/ExampleSSDataSources.xcodeproj
 source_directory: SSDataSources
 {% endhighlight %}
 
-Of particular note, particularly for CocoaPods repos, is the `source_directory` parameter. Here you can specify exactly which files should be included in your code coverage results — this is necessary so that you can measure only the files in your pod and exclude source files that might be in a sample or demo project.
+Of particular note for CocoaPods repos is the `source_directory` parameter. Here you can specify exactly which files should be included in your code coverage results — this is necessary so that you can measure only the files in your pod and exclude source files that might be in a sample or demo project.
 
 That's it! Package up a commit with your changes, send it via carrier pigeon to Github, and — if your build succeeds — you should see your very first coverage report on Coveralls.
