@@ -3,7 +3,7 @@
     <li class="title">{{ post.date | date: "%B %d, %Y" }} &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     <li class="last">
         <p class="summary">
-            {% if post.summary %}	
+        {% if post.summary %}
         	{{ post.summary | strip_html | truncatewords: 150 }}
         	{% elsif post.description %}
         	{{ post.description | strip_html | truncatewords: 100 }}
