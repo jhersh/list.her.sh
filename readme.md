@@ -1,5 +1,7 @@
 # list dot her dot sh
 
+[![Circle CI](https://circleci.com/gh/jhersh/list.her.sh.svg?style=svg&circle-token=7ba0ca54e3f49a96e7d137e37f5815db59bb38ea)](https://circleci.com/gh/jhersh/list.her.sh)
+
 Source for [list.her.sh](http://list.her.sh), a very silly blog indeed.
 
 list.her.sh is a static site...
