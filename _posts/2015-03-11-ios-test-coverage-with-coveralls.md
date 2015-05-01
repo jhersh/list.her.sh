@@ -38,7 +38,7 @@ GCC_GENERATE_TEST_COVERAGE_FILES=YES
 
 You might consider updating your CI script's build flags (#3 above) even in addition to #1 or #2 to be extra certain that your CI service is generating code coverage files for every build.
 
-Next, head to [Coveralls](https://coveralls.io), sign in with your Github user, and [add your repo](https://coveralls.io/repos/new) to Coveralls.
+Next, head to [Coveralls](https://coveralls.io), sign in with your Github user, and add your repo to Coveralls.
 
 Your project will also need a simple `.slather.yml` file in the root of your repo. This instructs slather how to process your code coverage results and where to send them. Here is one of mine, for use in a Travis CI project:
 
