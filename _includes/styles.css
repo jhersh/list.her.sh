@@ -61,13 +61,13 @@ a {
 body {
 	background: #1b1b1b;
 	color: #ccc;
-	font: 115% 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+	font: 125% "Avenir Next", "Lucida Grande", Helvetica, Arial, "Lucida Sans", Verdana, sans-serif;
 	vertical-align: baseline;
 	-webkit-font-smoothing: antialiased;
 }
 a {
 	color: #6dcff6;
-	font-weight: bolder;
+	font-weight: bold;
 }
 
 #content {
@@ -91,8 +91,8 @@ p code,
 li code {
 	background-color: #DDD;
 	border-radius: 5px;
-	padding-left: 3px;
-	padding-right: 3px;
+	padding-left: 6px;
+	padding-right: 6px;
 	color: #111;
 }
 
@@ -113,7 +113,7 @@ p a code {
 }
 
 #header h1 {
-	font-family: Helvetica, Arial, "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+	font-family: "Lucida Grande", "Lucida Sans", Helvetica, Arial, Verdana, sans-serif;
 	font-size: 24px;
 	font-weight: normal;
 	margin: 1px 0;
