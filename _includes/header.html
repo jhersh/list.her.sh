@@ -37,8 +37,10 @@
    <link rel="shortcut icon" href="http://her.sh/favicon.gif" />
    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.feedurl }}" />
    
-   <link rel="stylesheet" href="/css/styles.css" type="text/css" />
-   <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
+   <style>
+       {% include styles.css %}
+       {% include pygments.css %}
+   </style>
 </head>
 <body>
 

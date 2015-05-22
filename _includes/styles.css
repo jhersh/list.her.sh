@@ -151,6 +151,7 @@ div.highlight {
 ul.posts {
     margin-top: 40px;
     margin-bottom: 40px;
+    padding-left: 0;
     list-style-type: none;
 }
 
