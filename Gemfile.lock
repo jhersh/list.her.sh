@@ -94,3 +94,6 @@ DEPENDENCIES
   jekyll
   pygmentize
   rdiscount
+
+BUNDLED WITH
+   1.10.3
