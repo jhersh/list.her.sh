@@ -2,4 +2,7 @@
 
 {% if page.title | size > 0 %}
 <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+{% if page.summary | size > 0 %}
+<small><em>{{ page.summary }}</em></small>
+{% endif %}
 {% endif %}
