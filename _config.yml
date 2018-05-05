@@ -1,16 +1,16 @@
 markdown: rdiscount
 permalink: /:title
 title: list.her.sh
-url: http://list.her.sh
+url: https://list.her.sh
 highlighter: pygments
 
 exclude: [Gemfile, Gemfile.lock, readme.md, Rakefile, vendor, circle.yml]
 
 parent:
   name: her.sh
-  url: http://her.sh
+  url: https://her.sh
 
-feedurl: http://list.her.sh/atom.xml
+feedurl: https://list.her.sh/atom.xml
 sourceurl: https://github.com/jhersh/list.her.sh
 
 author:
