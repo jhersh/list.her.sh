@@ -12,5 +12,4 @@ end
 
 task :lint do
 		sh "bundle exec htmlproofer --check-external-hash --only-4xx --no-enforce-https _site"
-		puts `write-good _posts/*.md *.html`
 end

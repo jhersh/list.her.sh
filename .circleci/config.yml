@@ -11,12 +11,6 @@ jobs:
       - checkout
       - restore_cache:
           key: 1-gems-{{ checksum "Gemfile.lock" }}
-      - run: |
-          sudo apt-get install curl python-software-properties
-          curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
-          sudo apt-get install nodejs
-          node -v
-          sudo npm install -g write-good
       - run: rake setup
       - run: rake build
       - run: rake lint
