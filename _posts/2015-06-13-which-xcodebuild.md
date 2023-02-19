@@ -9,7 +9,7 @@ What an incredible WWDC! You've probably been checking out the new bits and you'
 
 Traditionally, you'd switch active `xcodebuild` versions using the `xcode-select --switch` command-line utility. But this requires `sudo` and switches the active developer directory system-wide, both of which can be undesirable particularly for CI builds.
 
-It turns out you can specify a per-build developer directory on the command line without `xcode-select`! The trick is twofold: assign a value to the `DEVELOPER_DIR` environment variable and run your build with [`xcrun`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/xcrun.1.html).
+It turns out you can specify a per-build developer directory on the command line without `xcode-select`! The trick is twofold: assign a value to the `DEVELOPER_DIR` environment variable and run your build with `xcrun`.
 
 I standardize my build commands with `rake` tasks. Here's a `rake test` task you might use, perhaps in your `xcode-7` branch, to execute a single build using an alternate Xcode:
 

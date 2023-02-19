@@ -1,9 +1,9 @@
-version: 2
+version: '2.1'
 
 jobs:
   build:
     docker:
-        - image: circleci/ruby:2.3
+        - image: cimg/ruby:3.1.2
     working_directory: ~/list.her.sh
     environment:
       - JEKYLL_ENV: "production"
@@ -27,25 +27,19 @@ jobs:
           key: 1-gems-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
-      
+
   deploy:
     docker:
-        - image: circleci/ruby:2.3
+        - image: cimg/python:3.11.0
     working_directory: ~/list.her.sh
-    filters:
-      branches:
-        only: master
     steps:
       - checkout
       - run: |
-          sudo apt-get install python-setuptools python-dateutil
-          wget https://github.com/s3tools/s3cmd/releases/download/v1.5.2/s3cmd-1.5.2.tar.gz
-          tar -xzvf s3cmd-1.5.2.tar.gz
-          cd s3cmd-1.5.2 && sudo python setup.py install
+          pip install s3cmd
           s3cmd --version
       - attach_workspace:
           at: ~/list.her.sh
-      - run: rake publish
+      - run: .circleci/publish.sh
       
 workflows:
   version: 2
@@ -53,6 +47,7 @@ workflows:
     jobs:
       - build
       - deploy:
+          context: Pushover
           requires: 
             - build
           filters:
