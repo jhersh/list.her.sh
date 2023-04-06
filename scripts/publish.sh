@@ -36,6 +36,6 @@ _site/ s3://list.her.sh/ \
 
 curl -s -F token=$PUSHOVER_APP \
 -F user=$PUSHOVER_USER \
--F "title=$CIRCLE_PROJECT_REPONAME deployed!" \
--F "message=Commit ${CIRCLE_SHA1:0:8} on branch $CIRCLE_BRANCH." \
+-F "title=$GITHUB_REPOSITORY deployed!" \
+-F "message=Commit ${GITHUB_SHA:0:7} on branch $GITHUB_REF_NAME." \
 https://api.pushover.net/1/messages.json
