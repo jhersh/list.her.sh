@@ -3,7 +3,7 @@ title: list.her.sh
 url: https://list.her.sh
 highlighter: pygments
 
-exclude: [Gemfile, Gemfile.lock, readme.md, Rakefile, vendor, circle.yml]
+exclude: [Gemfile, Gemfile.lock, readme.md, Rakefile, vendor, .github, scripts]
 
 parent:
   name: her.sh
