@@ -18,17 +18,24 @@ s3cmd sync --verbose -M --progress --acl-public \
 --recursive --access_key=$SITE_AWS_KEY \
 --secret_key=$SITE_AWS_SECRET --no-mime-magic \
 --no-guess-mime-type --default-mime-type='text/html; charset=utf-8' \
+_site/ s3://list.her.sh/ \
+--exclude '*.*' \
+--include '*.html' --include '*.xml'
+
+s3cmd --recursive modify \
+--access_key=$SITE_AWS_KEY \
+--secret_key=$SITE_AWS_SECRET \
 --add-header='Content-Encoding:gzip' \
 --add-header='Content-Type: text/html; charset=utf-8' \
---add-header='Cache-Control:max-age=60' \
-_site/ s3://list.her.sh/ \
+--add-header='Cache-Control: max-age=60' \
+s3://list.her.sh/ \
 --exclude '*.*' \
 --include '*.html' --include '*.xml'
 
 s3cmd sync --verbose -M --progress --acl-public \
 --recursive --access_key=$SITE_AWS_KEY \
 --secret_key=$SITE_AWS_SECRET --no-mime-magic \
---add-header='Cache-Control:max-age=86400' \
+--add-header='Cache-Control: max-age=86400' \
 _site/ s3://list.her.sh/ \
 --exclude '*.*' \
 --include '*.png' --include '*.css' --include '*.js' \
