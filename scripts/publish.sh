@@ -27,7 +27,7 @@ _site/ s3://list.her.sh/ \
 s3cmd sync --verbose -M --progress --acl-public \
 --recursive --access_key=$SITE_AWS_KEY \
 --secret_key=$SITE_AWS_SECRET --no-mime-magic \
---add-header='Cache-Control:max-age=86400' \
+--add-header='Cache-Control:max-age=600' \
 _site/ s3://list.her.sh/ \
 --exclude '*.*' \
 --include '*.png' --include '*.css' --include '*.js' \
