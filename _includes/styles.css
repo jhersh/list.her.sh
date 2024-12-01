@@ -70,6 +70,12 @@ a {
 	font-weight: bold;
 }
 
+a.tag {
+    font-size: 90%;
+	font-weight: bold;
+	color: #ccc;
+}
+
 #content {
 	margin: 0 auto;
 	overflow: hidden;

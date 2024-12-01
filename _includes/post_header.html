@@ -3,6 +3,17 @@
 {% if page.title | size > 0 %}
 <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
 {% if page.summary | size > 0 %}
-<small><em>{{ page.summary }}</em></small>
+<em>{{ page.summary }}</em><br/>
+{% endif %}
+{% if page.tags | size > 0 %}
+Tags:
+{% for tag in page.tags %}
+  <a
+    href={{ site.baseurl | append: "/tags/" | append: tag | append: "/" }}
+    rel="category tag"
+    class="tag">
+    #{{ tag }}
+  </a>
+{% endfor %}
 {% endif %}
 {% endif %}
