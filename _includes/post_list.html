@@ -1,6 +1,7 @@
 <ul class="posts">
 {% for post in posts %}
-    <li class="title">{{ post.date | date: "%B %-d, %Y" }} &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    <p class="date">{{ post.date | date: "%B %-d, %Y" }}</p>
+    <li class="title"><a href="{{ post.url }}">{{ post.title }}</a></li>
     <li class="last">
         <p class="summary">
         {% if post.summary %}

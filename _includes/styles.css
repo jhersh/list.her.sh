@@ -155,16 +155,17 @@ ul.posts {
     list-style-type: none;
 }
 
-ul.posts li {
-    margin-bottom:10px;
-}
-
 ul.posts li.title {
     font-size: 110%;
 }
 
 ul.posts li.last {
-    margin-bottom:20px;
+    margin-bottom:30px;
+}
+
+ul.posts p.date {
+    font-size: 90%;
+    font-style: italic;
 }
 
 p.summary {
@@ -286,7 +287,7 @@ body.archive .nav-previous {
 		float: none;
 		margin: 0px;
 	}
-	
+
 }
 
 @media screen and (max-width: 700px) {
@@ -296,5 +297,5 @@ body.archive .nav-previous {
 		float: none;
 		margin: 0px;
 	}
-	
+
 }
