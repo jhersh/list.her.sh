@@ -71,10 +71,14 @@ a {
 }
 
 a.tag {
-    font-size: 90%;
 	font-weight: bold;
 	color: #ccc;
+	background-color: #111;
+	border-radius: 4px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
+
 #content {
 	margin: 0 auto;
 	overflow: hidden;
@@ -96,9 +100,9 @@ pre {
 p code,
 li code {
 	background-color: #DDD;
-	border-radius: 5px;
-	padding-left: 6px;
-	padding-right: 6px;
+	border-radius: 4px;
+	padding-left: 5px;
+	padding-right: 5px;
 	color: #111;
 }
 
@@ -187,11 +191,17 @@ p.summary {
     border-bottom: 2px solid currentcolor;
 }
 
+a.tag:hover {
+	background-color: #999;
+	color: black;
+	border-bottom: none;
+}
+
 .post,
 #content .page {
 	line-height: 1.7;
 	margin-bottom: 25px;
-	margin-top: 25px;
+	margin-top: 35px;
 }
 
 .post p {
@@ -226,9 +236,9 @@ h2.entry-title {
 blockquote,
 .archive-meta {
 	background: #111;
-	border: 1px dotted #333;
+	border: 2px solid #333;
 	color: #999;
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 }
 blockquote p {
 	font-size: 0.9em;

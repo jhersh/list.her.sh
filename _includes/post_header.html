@@ -6,7 +6,6 @@
 <em>{{ page.summary }}</em><br/>
 {% endif %}
 {% if page.tags | size > 0 %}
-Tags:
 {% for tag in page.tags %}
   <a
     href={{ site.baseurl | append: "/tags/" | append: tag | append: "/" }}
