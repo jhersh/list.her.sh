@@ -5,4 +5,15 @@
 {% if page.summary | size > 0 %}
 <em>{{ page.summary }}</em><br/>
 {% endif %}
+{% if page.tags | size > 0 %}
+Tags:
+{% for tag in page.tags %}
+  <a
+    href={{ site.baseurl | append: "/tags/" | append: tag | append: "/" }}
+    rel="category tag"
+    class="tag">
+    #{{ tag }}
+  </a>
+{% endfor %}
+{% endif %}
 {% endif %}
