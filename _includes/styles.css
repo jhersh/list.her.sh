@@ -194,7 +194,7 @@ p.summary {
 a.tag:hover {
 	background-color: #999;
 	color: black;
-	border-bottom: none;
+	border-bottom: none !important;
 }
 
 .post,
