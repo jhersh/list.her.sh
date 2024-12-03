@@ -1,5 +1,5 @@
 source "https://rubygems.org"
 
-gem 'RedCloth'
 gem 'jekyll'
+gem 'jekyll-paginate'
 gem 'html-proofer'
