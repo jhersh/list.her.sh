@@ -1,6 +1,6 @@
 <hr />
 
-<p>    
+<div class="pagination">    
 	{% assign hasPrevious = page.previous.url != null %}
     {% assign hasNext = page.next.url != null %}
     
@@ -15,4 +15,4 @@
     {% if hasNext %}        
         <a class="page-link" href="{{ page.next.url }}" title="{{ page.next.title }}">&rarr; Next: {{ page.next.title }}</a>
     {% endif %}    
-</p>
+</div>

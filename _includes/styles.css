@@ -182,6 +182,10 @@ p.summary {
     font-size: 90%;
 }
 
+div.pagination {
+    text-align: center;
+}
+
 .post a:visited {
     color: #FFF;
 }
