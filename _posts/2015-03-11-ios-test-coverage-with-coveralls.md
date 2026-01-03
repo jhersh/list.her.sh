@@ -5,9 +5,9 @@ summary: Measuring code coverage in your iOS app or library for fun and profit!
 tags: ios
 ---
 
-Code coverage measures how much of your app or library is executed by at least one of your tests. This manifests as a percentage from 0-100% that can be a good high-level indicator of the quality — or at least the breadth — of your tests. 
+Code coverage measures how much of your app or library is executed by at least one of your tests. This manifests as a percentage from 0-100% that can be a good high-level indicator of the quality — or at least the breadth — of your tests.
 
-Today we'll see how easy it is to automatically measure, report, and visualize code coverage in your iOS app or library. You'll end up with a report [like this one](https://coveralls.io/builds/1975865) for each file in your project and a great visual representation showing line-by-line where your coverage is strong, where you can improve, and how your coverage trends up (or down!) over time. 
+Today we'll see how easy it is to automatically measure, report, and visualize code coverage in your iOS app or library. You'll end up with a report [like this one](https://coveralls.io/builds/1975865) for each file in your project and a great visual representation showing line-by-line where your coverage is strong, where you can improve, and how your coverage trends up (or down!) over time.
 
 You will need:
 
@@ -19,7 +19,7 @@ You will need:
 
 [SSDataSources](https://github.com/splinesoft/SSDataSources), [Jazz Hands](https://github.com/IFTTT/JazzHands), [FastttCamera](https://github.com/IFTTT/FastttCamera), and [IFTTTLaunchImage](https://github.com/IFTTT/IFTTTLaunchImage) are great examples of open-source iOS projects that report code coverage with Travis CI, Coveralls, and slather. As of this writing, slather does not yet support CircleCI, but work is [in progress](https://github.com/venmo/slather/pull/55) and SSDataSources is [nearly there](https://github.com/splinesoft/SSDataSources/pull/49). **Update:** slather now supports CircleCI and SSDataSources now builds on CircleCI with slather!
 
-First, you'll need to get CI to run your project's tests each time you push a commit. See the [Travis CI iOS docs](http://docs.travis-ci.com/user/languages/objective-c/) and [CircleCI iOS docs](https://circleci.com/docs/ios-builds-on-os-x/), or perhaps you'll be inspired by these [`.travis.yml`](https://github.com/IFTTT/JazzHands/blob/master/.travis.yml) and [`circle.yml`](https://github.com/splinesoft/SPLUserActivity/blob/master/circle.yml) files from the above projects. 
+First, you'll need to get CI to run your project's tests each time you push a commit. See the [Travis CI iOS docs](http://docs.travis-ci.com/user/languages/objective-c/) and CircleCI iOS docs, or perhaps you'll be inspired by these [`.travis.yml`](https://github.com/IFTTT/JazzHands/blob/master/.travis.yml) and [`circle.yml`](https://github.com/splinesoft/SPLUserActivity/blob/master/circle.yml) files from the above projects.
 
 Now you'll need to add the [slather](https://github.com/venmo/slather) rubygem to your project. You don't necessarily need slather installed locally on your development machine; rather, you could include it in your project's `Gemfile` or as a [dependency command](https://github.com/IFTTT/JazzHands/blob/master/.travis.yml#L3) in your `.travis.yml`. You'll also need to instruct your CI service to execute slather after a successful build: for Travis CI, you might add to your `.travis.yml` a line like `after_success: slather`.
 
@@ -27,12 +27,12 @@ You'll need to update some build settings in your project so that when your proj
 
 There are three ways to set this up. Pick your favorite:
 
-1. If you have slather installed on your development machine, you can execute `slather setup path/to/project.xcodeproj` to enable the necessary settings in your Xcode project. 
+1. If you have slather installed on your development machine, you can execute `slather setup path/to/project.xcodeproj` to enable the necessary settings in your Xcode project.
 2. If you don't have slather locally, head to the "Build Settings" tab of your Xcode project, scroll down to the "Code Generation" section, and set to YES these two settings for the scheme(s) and configuration(s) that your tests will execute: **Generate Test Coverage Files** and **Instrument Program Flow**.
-3. You could update the flags passed to `xcodebuild` in the [build command](https://github.com/IFTTT/JazzHands/blob/master/.travis.yml#L10) in your `.travis.yml` or `circle.yml` to add: 
+3. You could update the flags passed to `xcodebuild` in the [build command](https://github.com/IFTTT/JazzHands/blob/master/.travis.yml#L10) in your `.travis.yml` or `circle.yml` to add:
 
 {% highlight bash %}
-GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES 
+GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES
 GCC_GENERATE_TEST_COVERAGE_FILES=YES
 {% endhighlight %}
 
