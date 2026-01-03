@@ -60,7 +60,7 @@ a {
 
 body {
 	background: #1b1b1b;
-	color: #ccc;
+	color: white;
 	font: 125% "Avenir Next", "Lucida Grande", Helvetica, Arial, "Lucida Sans", Verdana, sans-serif;
 	vertical-align: baseline;
 	-webkit-font-smoothing: antialiased;
@@ -95,6 +95,10 @@ acronym {
 code,
 pre {
 	font-family: Menlo, Consolas, Monaco, "Lucida Console", Courier, monospace;
+}
+
+p.post-date {
+    margin-bottom: 15px;
 }
 
 p code,
@@ -244,7 +248,7 @@ blockquote,
 	color: #999;
 	margin-bottom: 1em;
 	margin-left: 1em;
-	padding: 6px;
+	padding: 4px;
 }
 blockquote p {
 	padding: 1em 1em 0;
