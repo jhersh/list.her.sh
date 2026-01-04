@@ -1,3 +1,0 @@
-A jekyll site by Jonathan Hersh.
-
-http://her.sh
