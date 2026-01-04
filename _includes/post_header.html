@@ -3,9 +3,10 @@
 {% endif %}
 <p class="post-date">{{ page.date | date: "%B %-d, %Y" }}</p>
 {% if page.summary | size > 0 %}
-<em>{{ page.summary }}</em><br/>
+<span class="summary"><em>{{ page.summary }}</em></span><br/>
 {% endif %}
 {% if page.tags | size > 0 %}
+Tags:
 {% for tag in page.tags %}
   <a
     href={{ site.baseurl | append: "/tags/" | append: tag | append: "/" }}
